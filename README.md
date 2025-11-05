@@ -1,16 +1,74 @@
-# React + Vite
+# 🗺️ Spatial Data Map Viewer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, interactive web application for visualizing spatial data with point markers and polygon layers. Built with React, Tailwind CSS, and Leaflet.js.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Point Data Layer** - Interactive markers with location details (Washington DC dataset)
+- **Polygon Layer** - Color-coded US states by population density
+- **Dual Display** - On-map popups + detailed sidebar cards
+- **Smooth Animations** - Fly-to transitions between layers
+- **Responsive Design** - Works on all screen sizes
+- **Interactive Legend** - Dynamic density color scale
 
-## React Compiler
+## 🚀 Quick Start
+```bash
+# Clone repository
+git clone https://github.com/yourusername/spatial-map-viewer.git
+cd spatial-map-viewer
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+# Install dependencies
+npm install
 
-## Expanding the ESLint configuration
+# Start development server
+npm start
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Open [http://localhost:3000](http://localhost:3000) to view the app.
+
+## 📦 Installation
+```bash
+# Core dependencies
+npm install react react-dom leaflet lucide-react
+
+# Dev dependencies
+npm install -D tailwindcss postcss autoprefixer @types/leaflet
+
+# Initialize Tailwind
+npx tailwindcss init -p
+```
+
+## 🎯 Usage
+
+1. **Points Layer** - Click blue markers to view location details
+2. **Polygon Layer** - Click states to see population density
+3. **Navigation** - Pan, zoom, and explore the map freely
+
+## 🔌 API Data Format
+
+**Point Data:**
+```javascript
+{ id, name, type, lat, lng, details }
+```
+
+**Polygon Data:**
+```javascript
+{ id, name, type, density, coordinates: [[lat, lng], ...] }
+```
+
+## 🏗️ Build
+```bash
+npm run build
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit changes (`git commit -m 'Add AmazingFeature'`)
+4. Push to branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+---
+
+⭐ Star this repo if you find it helpful!
